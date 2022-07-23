@@ -8,7 +8,7 @@ const NavbarContainer = styled.div`
   height: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   background-color: lightGrey;
   border: none;
@@ -20,52 +20,18 @@ const NavbarInnerContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   border: none;
 `;
 const LeftNavbarContainer = styled.div`
   flex: 70%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   padding-left: 5%;
   color: black;
   background-color: lightGrey;
-  border: none;
-`;
-const HamburgerButton = styled.button`
-  width: 40px;
-  height: 40px;
-  padding-right: 80px;
-  font-size: 25px;
-  align-self: center;
-  cursor: pointer;
-  border: none;
-  color: white;
-  background-color: transparent;
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
-const NavList = styled.div`
-  @media (max-width: 768px) {
-    width: 70vw;
-    height: 100vh;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: salmon;
-    ${(props) => (props.move ? `display: none;` : `display: flex;`)}
-    ${(props) => (props.extendNavbar ? `display: flex;` : `display: none;`)}
-  }
-`;
-const NavbarLink = styled(Link)`
-  color: black;
-  font-size: 14px;
-  margin: 10px;
   border: none;
 `;
 const RightNavbarContainer = styled.div`
@@ -76,6 +42,53 @@ const RightNavbarContainer = styled.div`
   background-color: lightGrey;
   border: none;
 `;
+const HamburgerButton = styled.button`
+  width: 40px;
+  height: 40px;
+  // padding-right: 80px;
+  font-size: 25px;
+  align-self: center;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: transparent;
+  // @media (min-width: 768px) {
+  //   display: none;
+  // }
+  @media (min-width: 540px) {
+    display: none;
+  }
+`;
+const NavList = styled.div`
+  @media (max-width: 540px) {
+    width: 100vw;
+    height: 150vh;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: salmon;
+    z-index: 10;
+    ${(props) => (props.move ? `display: none;` : `display: flex;`)}
+    ${(props) => (props.extendNavbar ? `display: flex;` : `display: none;`)}
+  }
+`;
+const NavbarLink = styled(Link)`
+  color: black;
+  font-size: 14px;
+  margin: 10px;
+  border: none;
+  @media (max-width: 540px) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+`;
+
 const LogoTitle = styled.span`
   margin-right: 10px;
   font-size: 12px;
