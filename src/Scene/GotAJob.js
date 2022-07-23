@@ -5,6 +5,7 @@ import CarouselResponse from "../Components/Carousel/CarouselResponse";
 
 const Container = styled.div`
   width: 100vw;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,6 +15,10 @@ const Container = styled.div`
 function GotAJob(props) {
   return (
     <Container>
+      <div>GotAJob</div>
+      <CarouselResponse />
+      <div>GotAJob</div>
+      <CarouselResponse />
       <div>GotAJob</div>
       <CarouselResponse />
     </Container>

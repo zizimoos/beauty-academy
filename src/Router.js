@@ -12,6 +12,8 @@ import GotAJob from "./Scene/GotAJob";
 import Situation from "./Scene/Situation";
 import SpecialLecture from "./Scene/SpecialLecture";
 import NotFound from "./Scene/NotFound";
+import BottomBar from "./Components/BottomBar";
+import Footer from "./Components/Footer";
 
 function Router(props) {
   return (
@@ -30,6 +32,8 @@ function Router(props) {
         <Route path="/special-lecture" element={<SpecialLecture />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
+      <Footer />
+      <BottomBar />
     </BrowserRouter>
   );
 }

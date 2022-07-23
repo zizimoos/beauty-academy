@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useRecoilValue } from "recoil";
 import styled from "styled-components";
+import { useRecoilValue } from "recoil";
 import { windowDimensionsStateAtom } from "../Recoil";
 // import Logo from "../assets/Logo.png";
 
 const NavbarContainer = styled.div`
+  position: fixed;
+  top: 0px;
+  left: 0;
   height: 50px;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: lightGrey;
   border: none;
+  z-index: 10;
   @media (max-width: ${(props) => props.width}px) {
     width: ${(props) => props.width}px;
   }
