@@ -15,7 +15,7 @@ import img_05 from "../../assets/images/beauty_05.jpg";
 import img_06 from "../../assets/images/beauty_06.jpg";
 
 const CarouselContainer = styled.div`
-  width: 540px;
+  width: 400px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -25,8 +25,7 @@ const CarouselContainer = styled.div`
   }
 `;
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 400px;
   object-fit: cover;
   margin: 0 auto;
 `;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 // import Logo from "../assets/Logo.png";
 
 const NavbarContainer = styled.div`
-  width: 540px;
+  width: 400px;
   height: 50px;
   display: flex;
   flex-direction: row;
@@ -12,7 +12,7 @@ const NavbarContainer = styled.div`
   align-items: center;
   background-color: lightGrey;
   border: none;
-  @media (min-width: 768px) {
+  @media (min-width: 400px) {
     width: 100vw;
   }
 `;
