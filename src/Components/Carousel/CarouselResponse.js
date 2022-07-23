@@ -100,7 +100,7 @@ function CarouselResponse(props) {
     <CarouselContainer>
       <Carousel
         showStatus={false}
-        showArrows={false}
+        showArrows={true}
         showIndicators={true}
         infiniteLoop={true}
         autoPlay={true}

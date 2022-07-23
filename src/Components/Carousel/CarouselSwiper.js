@@ -42,19 +42,19 @@ const CarouselContainer = styled.div`
     width: 540px;
   }
   @media (min-width: 768px) {
-    width: 768px;
+    width: 540px;
   }
   @media (min-width: 820px) {
-    width: 820px;
+    width: 540px;
   }
   @media (min-width: 912px) {
-    width: 912px;
+    width: 540px;
   }
   @media (min-width: 1024px) {
-    width: 414px;
+    width: 540px;
   }
   @media (min-width: 1280px) {
-    width: 414px;
+    width: 540px;
   }
 `;
 const Image = styled.img`
@@ -83,19 +83,19 @@ const Image = styled.img`
     width: 540px;
   }
   @media (min-width: 768px) {
-    width: 768px;
+    width: 540px;
   }
   @media (min-width: 820px) {
-    width: 820px;
+    width: 540px;
   }
   @media (min-width: 912px) {
-    width: 912px;
+    width: 540px;
   }
   @media (min-width: 1024px) {
-    width: 414px;
+    width: 540px;
   }
   @media (min-width: 1280px) {
-    width: 414px;
+    width: 540px;
   }
 `;
 
@@ -106,7 +106,7 @@ function CarouselSwiper(props) {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={0}
         slidesPerView={1}
-        // navigation
+        navigation
         pagination={{ clickable: true }}
         //   scrollbar={{ draggable: true }}
         a11y={true}
