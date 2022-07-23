@@ -4,7 +4,7 @@ import styled from "styled-components";
 // import Logo from "../assets/Logo.png";
 
 const NavbarContainer = styled.div`
-  width: 400px;
+  width: 360px;
   height: 50px;
   display: flex;
   flex-direction: row;
@@ -12,7 +12,40 @@ const NavbarContainer = styled.div`
   align-items: center;
   background-color: lightGrey;
   border: none;
-  @media (min-width: 400px) {
+  @media (max-width: 280px) {
+    width: 280px;
+  }
+  @media (min-width: 375px) {
+    width: 375px;
+  }
+  @media (min-width: 390px) {
+    width: 390px;
+  }
+  @media (min-width: 393px) {
+    width: 393px;
+  }
+  @media (min-width: 412px) {
+    width: 412px;
+  }
+  @media (min-width: 414px) {
+    width: 414px;
+  }
+  @media (min-width: 540px) {
+    width: 540px;
+  }
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+  @media (min-width: 820px) {
+    width: 820px;
+  }
+  @media (min-width: 912px) {
+    width: 100vw;
+  }
+  @media (min-width: 1024px) {
+    width: 100vw;
+  }
+  @media (min-width: 1280px) {
     width: 100vw;
   }
 `;
@@ -25,17 +58,16 @@ const NavbarInnerContainer = styled.div`
   border: none;
 `;
 const LeftNavbarContainer = styled.div`
-  flex: 70%;
   display: flex;
+  flex: 70%;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-left: 5%;
   color: black;
   background-color: lightGrey;
   border: none;
 `;
 const RightNavbarContainer = styled.div`
-  flex: 30%;
+  flex: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,37 +77,46 @@ const RightNavbarContainer = styled.div`
 const HamburgerButton = styled.button`
   width: 40px;
   height: 40px;
-  // padding-right: 80px;
   font-size: 25px;
   align-self: center;
   cursor: pointer;
   border: none;
   color: white;
   background-color: transparent;
-  // @media (min-width: 768px) {
-  //   display: none;
-  // }
-  @media (min-width: 540px) {
-    display: none;
-  }
 `;
 const NavList = styled.div`
-  @media (max-width: 540px) {
-    width: 100vw;
-    height: 150vh;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-left: 20px;
-    background-color: salmon;
-    z-index: 10;
-    ${(props) => (props.move ? `display: none;` : `display: flex;`)}
-    ${(props) => (props.extendNavbar ? `display: flex;` : `display: none;`)}
+  width: 60vw;
+  height: 100vh;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: salmon;
+  z-index: 10;
+  ${(props) => (props.move ? `display: none;` : `display: flex;`)}
+  ${(props) => (props.extendNavbar ? `display: flex;` : `display: none;`)}
+  @media (min-width: 540px) {
+    width: 40vw;
+  }
+  @media (min-width: 768px) {
+    width: 40vw;
+  }
+  @media (min-width: 820px) {
+    width: 40vw;
+  }
+  @media (min-width: 912px) {
+    width: 40vw;
+  }
+  @media (min-width: 1024px) {
+    width: 30vw;
+  }
+  @media (min-width: 1280px) {
+    width: 30vw;
   }
 `;
 const NavbarLink = styled(Link)`
@@ -83,7 +124,7 @@ const NavbarLink = styled(Link)`
   font-size: 14px;
   margin: 10px;
   border: none;
-  @media (max-width: 540px) {
+  @media (max-width: 360px) {
     font-size: 16px;
     margin-bottom: 20px;
   }

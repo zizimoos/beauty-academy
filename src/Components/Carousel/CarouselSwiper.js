@@ -15,19 +15,88 @@ import img_05 from "../../assets/images/beauty_05.jpg";
 import img_06 from "../../assets/images/beauty_06.jpg";
 
 const CarouselContainer = styled.div`
-  width: 400px;
+  width: 360px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 280px) {
+    width: 280px;
+  }
+  @media (min-width: 375px) {
+    width: 375px;
+  }
+  @media (min-width: 390px) {
+    width: 390px;
+  }
+  @media (min-width: 393px) {
+    width: 393px;
+  }
+  @media (min-width: 412px) {
+    width: 412px;
+  }
+  @media (min-width: 414px) {
+    width: 414px;
+  }
+  @media (min-width: 540px) {
+    width: 540px;
+  }
   @media (min-width: 768px) {
-    width: 600px;
+    width: 768px;
+  }
+  @media (min-width: 820px) {
+    width: 820px;
+  }
+  @media (min-width: 912px) {
+    width: 912px;
+  }
+  @media (min-width: 1024px) {
+    width: 414px;
+  }
+  @media (min-width: 1280px) {
+    width: 414px;
   }
 `;
 const Image = styled.img`
-  width: 400px;
+  width: 360px;
   object-fit: cover;
   margin: 0 auto;
+  @media (max-width: 280px) {
+    width: 280px;
+  }
+  @media (min-width: 375px) {
+    width: 375px;
+  }
+  @media (min-width: 390px) {
+    width: 390px;
+  }
+  @media (min-width: 393px) {
+    width: 393px;
+  }
+  @media (min-width: 412px) {
+    width: 412px;
+  }
+  @media (min-width: 414px) {
+    width: 414px;
+  }
+  @media (min-width: 540px) {
+    width: 540px;
+  }
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+  @media (min-width: 820px) {
+    width: 820px;
+  }
+  @media (min-width: 912px) {
+    width: 912px;
+  }
+  @media (min-width: 1024px) {
+    width: 414px;
+  }
+  @media (min-width: 1280px) {
+    width: 414px;
+  }
 `;
 
 function CarouselSwiper(props) {
