@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useRecoilValue } from "recoil";
 import styled from "styled-components";
+import { windowDimensionsStateAtom } from "../Recoil";
 // import Logo from "../assets/Logo.png";
 
 const NavbarContainer = styled.div`
-  width: 360px;
   height: 50px;
   display: flex;
   flex-direction: row;
@@ -12,41 +13,8 @@ const NavbarContainer = styled.div`
   align-items: center;
   background-color: lightGrey;
   border: none;
-  @media (max-width: 280px) {
-    width: 280px;
-  }
-  @media (min-width: 375px) {
-    width: 375px;
-  }
-  @media (min-width: 390px) {
-    width: 390px;
-  }
-  @media (min-width: 393px) {
-    width: 393px;
-  }
-  @media (min-width: 412px) {
-    width: 412px;
-  }
-  @media (min-width: 414px) {
-    width: 414px;
-  }
-  @media (min-width: 540px) {
-    width: 540px;
-  }
-  @media (min-width: 768px) {
-    width: 768px;
-  }
-  @media (min-width: 820px) {
-    width: 820px;
-  }
-  @media (min-width: 912px) {
-    width: 100vw;
-  }
-  @media (min-width: 1024px) {
-    width: 100vw;
-  }
-  @media (min-width: 1280px) {
-    width: 100vw;
+  @media (max-width: ${(props) => props.width}px) {
+    width: ${(props) => props.width}px;
   }
 `;
 const NavbarInnerContainer = styled.div`
@@ -129,7 +97,6 @@ const NavbarLink = styled(Link)`
     margin-bottom: 20px;
   }
 `;
-
 const LogoTitle = styled.span`
   margin-right: 10px;
   font-size: 12px;
@@ -159,6 +126,7 @@ const LogoTitle = styled.span`
 function Navbar(props) {
   const [extendNavbar, setExtendNavbar] = useState(false);
   const [move, setMove] = useState(false);
+  const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
 
   const hamburgerClick = () => {
     setExtendNavbar(!extendNavbar);
@@ -169,9 +137,17 @@ function Navbar(props) {
     setExtendNavbar(false);
   };
 
+  useEffect(() => {
+    console.log(
+      "windowDimensions",
+      windowDimensions.width,
+      windowDimensions.height
+    );
+  }, [windowDimensions]);
+
   return (
     <>
-      <NavbarContainer>
+      <NavbarContainer width={windowDimensions.width}>
         <NavbarInnerContainer extendNavbar={extendNavbar}>
           <LeftNavbarContainer>
             <HamburgerButton onClick={hamburgerClick}>

@@ -1,5 +1,9 @@
+import { useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
+import { useSetRecoilState } from "recoil";
+import { windowDimensionsStateAtom } from "./Recoil";
 import Router from "./Router";
+import useWindowDimensions from "./Util/useWindowDimensions";
 
 const GlobalStyle = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -68,6 +72,12 @@ a {
 `;
 
 function App() {
+  const { height, width } = useWindowDimensions();
+  const windowDimensionsSet = useSetRecoilState(windowDimensionsStateAtom);
+  useEffect(() => {
+    windowDimensionsSet({ width: width, height: height });
+  }, [width, height, windowDimensionsSet]);
+
   return (
     <>
       <GlobalStyle />

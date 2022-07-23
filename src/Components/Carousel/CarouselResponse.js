@@ -1,11 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 import img_01 from "../../assets/images/beauty_01.jpg";
 import img_02 from "../../assets/images/beauty_02.jpg";
@@ -99,41 +95,41 @@ const Image = styled.img`
   }
 `;
 
-function CarouselSwiper(props) {
+function CarouselResponse(props) {
   return (
     <CarouselContainer>
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={0}
-        slidesPerView={1}
-        // navigation
-        pagination={{ clickable: true }}
-        //   scrollbar={{ draggable: true }}
-        a11y={true}
-        //   onSwiper={(swiper) => console.log(swiper)}
-        //   onSlideChange={() => console.log("slide change")}
+      <Carousel
+        showStatus={false}
+        showArrows={false}
+        showIndicators={true}
+        infiniteLoop={true}
+        autoPlay={true}
+        showThumbs={false}
+        // onChange={onChange}
+        // onClickItem={onClickItem}
+        // onClickThumb={onClickThumb}
       >
-        <SwiperSlide>
-          <Image src={img_01} alt="Image"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img_02} alt="Image"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img_03} alt="Image"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img_04} alt="Image"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img_05} alt="Image"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img_06} alt="Image"></Image>
-        </SwiperSlide>
-      </Swiper>
+        <div>
+          <Image src={img_01} />
+        </div>
+        <div>
+          <Image src={img_02} />
+        </div>
+        <div>
+          <Image src={img_03} />
+        </div>
+        <div>
+          <Image src={img_04} />
+        </div>
+        <div>
+          <Image src={img_05} />
+        </div>
+        <div>
+          <Image src={img_06} />
+        </div>
+      </Carousel>
     </CarouselContainer>
   );
 }
 
-export default CarouselSwiper;
+export default CarouselResponse;
