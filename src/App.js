@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
-import { useSetRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 import { windowDimensionsStateAtom } from "./Recoil";
 import Router from "./Router";
 import useWindowDimensions from "./Util/useWindowDimensions";
@@ -55,7 +55,7 @@ border-collapse: collapse;
 border-spacing: 0;
 }
 body {
-  width: 100vw;
+  width: ${(props) => props.width}px;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -73,14 +73,16 @@ a {
 
 function App() {
   const { height, width } = useWindowDimensions();
-  const windowDimensionsSet = useSetRecoilState(windowDimensionsStateAtom);
+  const [windowDimensions, windowDimensionsSet] = useRecoilState(
+    windowDimensionsStateAtom
+  );
   useEffect(() => {
     windowDimensionsSet({ width: width, height: height });
   }, [width, height, windowDimensionsSet]);
 
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle width={windowDimensions.width} />
       <Router />
     </>
   );

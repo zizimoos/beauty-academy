@@ -14,7 +14,7 @@ const CarouselContainer = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: black;
+  background-color: orchid;
   div {
     width: ${(props) => props.width}px;
     margin-top: 15px;
@@ -22,7 +22,7 @@ const CarouselContainer = styled.div`
     font-size: 1rem;
     text-align: center;
     // padding: 1rem;
-    background-color: black;
+    background-color: orchid;
     color: white;
   }
   @media (max-width: 280px) {
@@ -31,36 +31,6 @@ const CarouselContainer = styled.div`
   @media (min-width: ${(props) => props.width}px) {
     width: ${(props) => props.width}px;
   }
-  //   @media (min-width: 390px) {
-  //     width: 390px;
-  //   }
-  //   @media (min-width: 393px) {
-  //     width: 393px;
-  //   }
-  //   @media (min-width: 412px) {
-  //     width: 412px;
-  //   }
-  //   @media (min-width: 414px) {
-  //     width: 414px;
-  //   }
-  //   @media (min-width: 540px) {
-  //     width: 540px;
-  //   }
-  //   @media (min-width: 768px) {
-  //     width: 540px;
-  //   }
-  //   @media (min-width: 820px) {
-  //     width: 768px;
-  //   }
-  //   @media (min-width: 912px) {
-  //     width: 540px;
-  //   }
-  //   @media (min-width: 1024px) {
-  //     width: 912px;
-  //   }
-  //   @media (min-width: 1280px) {
-  //     width: 1280px;
-  //   }
 `;
 
 function CarouselNaviBar(props) {
@@ -81,19 +51,25 @@ function CarouselNaviBar(props) {
           <div>교육과정</div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>교육과정</div>
+          <div>창업코스</div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>교육과정</div>
+          <div>입시코스</div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>교육과정</div>
+          <div>리얼후기</div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>교육과정</div>
+          <div>합격현황</div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>교육과정</div>
+          <div>커뮤니티</div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>무료특강</div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>이벤트</div>
         </SwiperSlide>
       </Swiper>
     </CarouselContainer>

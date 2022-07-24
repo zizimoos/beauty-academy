@@ -70,7 +70,7 @@ const NavList = styled.div`
   align-items: flex-start;
   padding-top: 20px;
   padding-left: 20px;
-  background-color: salmon;
+  background-color: white;
   z-index: 10;
   ${(props) => (props.move ? `display: none;` : `display: flex;`)}
   ${(props) => (props.extendNavbar ? `display: flex;` : `display: none;`)}
