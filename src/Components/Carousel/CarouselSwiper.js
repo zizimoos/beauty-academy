@@ -108,7 +108,7 @@ function CarouselSwiper(props) {
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        //   scrollbar={{ draggable: true }}
+        // scrollbar={{ draggable: true }}
         a11y={true}
         //   onSwiper={(swiper) => console.log(swiper)}
         //   onSlideChange={() => console.log("slide change")}

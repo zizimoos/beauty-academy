@@ -104,7 +104,13 @@ function CarouselResponse(props) {
         showIndicators={true}
         infiniteLoop={true}
         autoPlay={true}
+        interval={5000}
         showThumbs={false}
+        stopOnHover={true}
+        swipeable={true}
+        emulateTouch={true}
+        dynamicHeight={true}
+
         // onChange={onChange}
         // onClickItem={onClickItem}
         // onClickThumb={onClickThumb}
