@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { windowDimensionsStateAtom } from "../Recoil";
+import CarouselNaviBar from "./Carousel/CarouselNaviBar";
 // import Logo from "../assets/Logo.png";
 
 const NavbarContainer = styled.div`
@@ -191,6 +192,7 @@ function Navbar(props) {
           </RightNavbarContainer>
         </NavbarInnerContainer>
       </NavbarContainer>
+      <CarouselNaviBar width={windowDimensions.width} />
     </>
   );
 }

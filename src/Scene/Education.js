@@ -5,7 +5,7 @@ import CarouselSwiper from "../Components/Carousel/CarouselSwiper";
 
 const Container = styled.div`
   width: 100vw;
-  margin-top: 50px;
+  // margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
