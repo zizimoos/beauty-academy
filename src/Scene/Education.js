@@ -14,10 +14,12 @@ const Container = styled.div`
   align-items: center;
 `;
 const TextBox = styled.div`
+  padding: 20px;
   @media (max-width: ${(props) => props.width}px) {
     width: ${(props) => (props.width > 1280 ? 1280 : props.width)}px;
+    padding-left: ${(props) => (props.width > 1280 ? 150 : 20)}px;
+    padding-right: ${(props) => (props.width > 1280 ? 150 : 20)}px;
   }
-  padding: 20px;
 `;
 function Education(props) {
   const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
