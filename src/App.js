@@ -56,6 +56,7 @@ border-spacing: 0;
 }
 body {
   width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -82,7 +83,7 @@ function App() {
 
   return (
     <>
-      <GlobalStyle width={windowDimensions.width} />
+      <GlobalStyle width={windowDimensions} />
       <Router />
     </>
   );

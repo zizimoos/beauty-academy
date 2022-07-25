@@ -19,6 +19,7 @@ const TextBox = styled.div`
 function Main(props) {
   return (
     <Container>
+      <div>Home</div>
       <CarouselSwiper />
       <TextBox>
         모든 플랫폼의 사진 치수를 기억해야 하던 나날은 이제 없습니다. 원하는

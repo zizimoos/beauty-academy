@@ -7,11 +7,8 @@ import CarouselNaviBar from "./Carousel/CarouselNaviBar";
 // import Logo from "../assets/Logo.png";
 
 const NavbarContainer = styled.div`
-  position: fixed;
-  top: 0px;
-  left: 0;
   height: 50px;
-
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -20,7 +17,7 @@ const NavbarContainer = styled.div`
   border: none;
   z-index: 10;
   @media (max-width: ${(props) => props.width}px) {
-    width: ${(props) => props.width}px;
+    width: ${(props) => (props.width > 1280 ? 1280 : props.width)}px;
   }
 `;
 const NavbarInnerContainer = styled.div`
@@ -160,6 +157,9 @@ function Navbar(props) {
               {extendNavbar ? <>&#10005;</> : <> &#9776;</>}
             </HamburgerButton>
             <NavList move={move} extendNavbar={extendNavbar}>
+              <NavbarLink onClick={clickMove} move={move} to="/">
+                Home
+              </NavbarLink>
               <NavbarLink onClick={clickMove} move={move} to="/education">
                 교육과정
               </NavbarLink>

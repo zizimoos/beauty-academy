@@ -6,9 +6,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { windowDimensionsStateAtom } from "../../Recoil";
+import { useRecoilValue } from "recoil";
 
 const CarouselContainer = styled.div`
-  width: ${(props) => props.width}px;
+  height: 50px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -16,26 +18,26 @@ const CarouselContainer = styled.div`
   color: white;
   background-color: orchid;
   div {
-    width: ${(props) => props.width}px;
-    margin-top: 15px;
-    margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1rem;
     text-align: center;
-    // padding: 1rem;
     background-color: orchid;
     color: white;
   }
   @media (max-width: 280px) {
     width: 280px;
   }
-  @media (min-width: ${(props) => props.width}px) {
-    width: ${(props) => props.width}px;
+  @media (max-width: ${(props) => props.width}px) {
+    width: ${(props) => (props.width > 1280 ? 1280 : props.width)}px;
   }
 `;
 
 function CarouselNaviBar(props) {
+  const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
   return (
-    <CarouselContainer>
+    <CarouselContainer width={windowDimensions.width}>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={0}
