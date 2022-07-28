@@ -58,8 +58,6 @@ const CarouselContainer = styled.div`
   }
 `;
 const Image = styled.img`
-  width: 360px;
-  object-fit: cover;
   margin: 0 auto;
   @media (max-width: 280px) {
     width: 280px;
@@ -99,9 +97,9 @@ const Image = styled.img`
   }
 `;
 
-function CarouselSwiper(props) {
+function CarouselSwiper({ width }) {
   return (
-    <CarouselContainer>
+    <CarouselContainer width={width}>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={0}
