@@ -41,7 +41,7 @@ function CarouselNaviBar({ width }) {
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={1}
-        slidesPerView={width > 1280 ? 8 : 4}
+        slidesPerView={width > 1279 ? 8 : width > 1023 ? 6 : 4}
         // navigation
         // pagination={{ clickable: true }}
         // scrollbar={{ draggable: true }}
