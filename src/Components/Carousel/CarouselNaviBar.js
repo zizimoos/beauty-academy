@@ -34,14 +34,14 @@ const CarouselContainer = styled.div`
   }
 `;
 
-function CarouselNaviBar(props) {
+function CarouselNaviBar({ width }) {
   const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
   return (
     <CarouselContainer width={windowDimensions.width}>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={0}
-        slidesPerView={4}
+        spaceBetween={1}
+        slidesPerView={width > 1280 ? 8 : 4}
         // navigation
         // pagination={{ clickable: true }}
         // scrollbar={{ draggable: true }}

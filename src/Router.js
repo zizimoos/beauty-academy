@@ -19,7 +19,6 @@ function Router(props) {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/community" element={<Community />} />

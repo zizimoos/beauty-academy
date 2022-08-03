@@ -67,7 +67,7 @@ const NavList = styled.div`
   align-items: flex-start;
   padding-top: 20px;
   padding-left: 20px;
-  background-color: white;
+  background-color: yellow;
   z-index: 10;
   ${(props) => (props.move ? `display: none;` : `display: flex;`)}
   ${(props) => (props.extendNavbar ? `display: flex;` : `display: none;`)}
@@ -87,7 +87,8 @@ const NavList = styled.div`
     width: 30vw;
   }
   @media (min-width: 1280px) {
-    width: 30vw;
+    width: 300px;
+    left: calc(50% - 640px);
   }
 `;
 const NavbarLink = styled(Link)`
