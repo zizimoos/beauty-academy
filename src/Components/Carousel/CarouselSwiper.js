@@ -13,9 +13,15 @@ import img_03 from "../../assets/images/beauty_03.jpg";
 import img_04 from "../../assets/images/beauty_04.jpg";
 import img_05 from "../../assets/images/beauty_05.jpg";
 import img_06 from "../../assets/images/beauty_06.jpg";
+import img_07 from "../../assets/images/beauty_07.jpg";
+import img_08 from "../../assets/images/beauty_08.jpg";
+import img_09 from "../../assets/images/beauty_09.jpg";
+import img_10 from "../../assets/images/beauty_10.jpg";
+import img_11 from "../../assets/images/beauty_11.jpg";
+import img_12 from "../../assets/images/beauty_12.jpg";
 
 const CarouselContainer = styled.div`
-  width: 360px;
+  // width: 360px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -51,14 +57,14 @@ const CarouselContainer = styled.div`
     width: 540px;
   }
   @media (min-width: 1024px) {
-    width: 540px;
+    width: 600px;
   }
   @media (min-width: 1280px) {
-    width: 540px;
+    width: 600px;
   }
 `;
 const Image = styled.img`
-  margin: 0 auto;
+  // margin: 0 auto;
   @media (max-width: 280px) {
     width: 280px;
   }
@@ -90,10 +96,10 @@ const Image = styled.img`
     width: 540px;
   }
   @media (min-width: 1024px) {
-    width: 540px;
+    width: 600px;
   }
   @media (min-width: 1280px) {
-    width: 540px;
+    width: 600px;
   }
 `;
 
@@ -112,22 +118,22 @@ function CarouselSwiper({ width }) {
         //   onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
-          <Image src={img_01} alt="Image"></Image>
+          <Image src={img_07} alt="Image"></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={img_02} alt="Image"></Image>
+          <Image src={img_08} alt="Image"></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={img_03} alt="Image"></Image>
+          <Image src={img_09} alt="Image"></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={img_04} alt="Image"></Image>
+          <Image src={img_10} alt="Image"></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={img_05} alt="Image"></Image>
+          <Image src={img_11} alt="Image"></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={img_06} alt="Image"></Image>
+          <Image src={img_12} alt="Image"></Image>
         </SwiperSlide>
       </Swiper>
     </CarouselContainer>

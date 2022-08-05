@@ -59,7 +59,7 @@ body {
   height: ${(props) => props.height}px;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
 }
