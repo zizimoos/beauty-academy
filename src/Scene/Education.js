@@ -26,7 +26,7 @@ function Education(props) {
   return (
     <Container>
       <div>Education</div>
-      <CarouselSwiper />
+      <CarouselSwiper width={windowDimensions.width} />
       <TextBox width={windowDimensions.width}>
         모든 플랫폼의 사진 치수를 기억해야 하던 나날은 이제 없습니다. 원하는
         디자인을 정하고 나면 Adobe Express의 간편하고 마법 같은 크기 조절

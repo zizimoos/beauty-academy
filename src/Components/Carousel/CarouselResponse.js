@@ -9,19 +9,19 @@ import img_03 from "../../assets/images/beauty_03.jpg";
 import img_04 from "../../assets/images/beauty_04.jpg";
 import img_05 from "../../assets/images/beauty_05.jpg";
 import img_06 from "../../assets/images/beauty_06.jpg";
-import img_07 from "../../assets/images/beauty_07.jpg";
-import img_08 from "../../assets/images/beauty_08.jpg";
-import img_09 from "../../assets/images/beauty_09.jpg";
-import img_10 from "../../assets/images/beauty_10.jpg";
-import img_11 from "../../assets/images/beauty_11.jpg";
-import img_12 from "../../assets/images/beauty_12.jpg";
+// import img_07 from "../../assets/images/beauty_07.jpg";
+// import img_08 from "../../assets/images/beauty_08.jpg";
+// import img_09 from "../../assets/images/beauty_09.jpg";
+// import img_10 from "../../assets/images/beauty_10.jpg";
+// import img_11 from "../../assets/images/beauty_11.jpg";
+// import img_12 from "../../assets/images/beauty_12.jpg";
 
 const CarouselContainer = styled.div`
-  width: 360px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+
   @media (max-width: 280px) {
     width: 280px;
   }
@@ -44,19 +44,19 @@ const CarouselContainer = styled.div`
     width: 540px;
   }
   @media (min-width: 768px) {
-    width: 768px;
+    width: 540px;
   }
   @media (min-width: 820px) {
-    width: 820px;
+    width: 540px;
   }
   @media (min-width: 912px) {
-    width: 912px;
+    width: 540px;
   }
   @media (min-width: 1024px) {
-    width: 414px;
+    width: 600px;
   }
   @media (min-width: 1280px) {
-    width: 414px;
+    width: 600px;
   }
 `;
 const Image = styled.img`
@@ -85,25 +85,25 @@ const Image = styled.img`
     width: 540px;
   }
   @media (min-width: 768px) {
-    width: 768px;
+    width: 540px;
   }
   @media (min-width: 820px) {
-    width: 820px;
+    width: 540px;
   }
   @media (min-width: 912px) {
-    width: 912px;
+    width: 540px;
   }
   @media (min-width: 1024px) {
-    width: 414px;
+    width: 600px;
   }
   @media (min-width: 1280px) {
-    width: 414px;
+    width: 600px;
   }
 `;
 
-function CarouselResponse(props) {
+function CarouselResponse({ width }) {
   return (
-    <CarouselContainer>
+    <CarouselContainer width={width}>
       <Carousel
         showStatus={false}
         showArrows={true}
