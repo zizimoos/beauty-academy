@@ -17,9 +17,11 @@ const TextBox = styled.div`
   padding: 20px;
   line-height: 1.5;
   @media (max-width: ${(props) => props.width}px) {
-    width: ${(props) => (props.width > 1280 ? 1280 : props.width)}px;
-    padding-left: ${(props) => (props.width > 1280 ? 150 : 20)}px;
-    padding-right: ${(props) => (props.width > 1280 ? 150 : 20)}px;
+    width: ${(props) => (props.width > 1023 ? 1024 : props.width)}px;
+    padding-left: ${(props) =>
+      props.width < 768 ? 10 : props.width > 1023 ? 200 : 110}px;
+    padding-right: ${(props) =>
+      props.width < 768 ? 10 : props.width > 1023 ? 200 : 110}px;
   }
 `;
 function Main(props) {
