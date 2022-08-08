@@ -5,6 +5,7 @@ import { useRecoilValue } from "recoil";
 import { windowDimensionsStateAtom } from "../Recoil";
 import CarouselNaviBar from "./Carousel/CarouselNaviBar";
 // import Logo from "../assets/Logo.png";
+import navItems from "./NavItems";
 
 const NavbarContainer = styled.div`
   height: 50px;
@@ -158,33 +159,16 @@ function Navbar(props) {
               {extendNavbar ? <>&#10005;</> : <> &#9776;</>}
             </HamburgerButton>
             <NavList move={move} extendNavbar={extendNavbar}>
-              <NavbarLink onClick={clickMove} move={move} to="/">
-                Home
-              </NavbarLink>
-              <NavbarLink onClick={clickMove} move={move} to="/education">
-                교육과정
-              </NavbarLink>
-              <NavbarLink onClick={clickMove} move={move} to="/got-a-job">
-                취.창업코스
-              </NavbarLink>
-              <NavbarLink onClick={clickMove} move={move} to="/enterance-exam">
-                입시코스
-              </NavbarLink>
-              <NavbarLink onClick={clickMove} move={move} to="/epilogue">
-                수강생리얼후기
-              </NavbarLink>
-              <NavbarLink onClick={clickMove} move={move} to="/">
-                자격증 합격현황
-              </NavbarLink>
-              <NavbarLink onClick={clickMove} move={move} to="/community">
-                커뮤니티
-              </NavbarLink>
-              <NavbarLink onClick={clickMove} move={move} to="/special-lecture">
-                무료특강
-              </NavbarLink>
-              <NavbarLink onClick={clickMove} move={move} to="/event">
-                이벤트
-              </NavbarLink>
+              {navItems.map((item, index) => (
+                <NavbarLink
+                  key={index}
+                  onClick={clickMove}
+                  move={move}
+                  to={item.path}
+                >
+                  {item.title}
+                </NavbarLink>
+              ))}
             </NavList>
           </LeftNavbarContainer>
           <RightNavbarContainer>

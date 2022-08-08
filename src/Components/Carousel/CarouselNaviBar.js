@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { windowDimensionsStateAtom } from "../../Recoil";
 import { useRecoilValue } from "recoil";
+import navItems from "../NavItems";
 
 const CarouselContainer = styled.div`
   height: 50px;
@@ -19,12 +21,15 @@ const CarouselContainer = styled.div`
   background-color: orchid;
   div {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-size: 1rem;
     text-align: center;
     background-color: orchid;
     color: white;
+    div:first-child {
+      margin-left: 10px;
+    }
   }
   @media (max-width: 280px) {
     width: 280px;
@@ -40,8 +45,8 @@ function CarouselNaviBar({ width }) {
     <CarouselContainer width={windowDimensions.width}>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={1}
-        slidesPerView={width > 1279 ? 8 : width > 1023 ? 6 : 4}
+        spaceBetween={0}
+        slidesPerView={width > 1279 ? 9 : width > 1023 ? 6 : 4}
         // navigation
         // pagination={{ clickable: true }}
         // scrollbar={{ draggable: true }}
@@ -49,30 +54,13 @@ function CarouselNaviBar({ width }) {
         //   onSwiper={(swiper) => console.log(swiper)}
         //   onSlideChange={() => console.log("slide change")}
       >
-        <SwiperSlide>
-          <div>교육과정</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>창업코스</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>입시코스</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>리얼후기</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>합격현황</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>커뮤니티</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>무료특강</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>이벤트</div>
-        </SwiperSlide>
+        {navItems.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div>
+              <Link to={item.path}>{item.title}</Link>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </CarouselContainer>
   );
