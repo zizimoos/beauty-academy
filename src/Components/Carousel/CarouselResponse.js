@@ -3,18 +3,7 @@ import styled from "styled-components";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-import img_01 from "../../assets/images/beauty_01.jpg";
-import img_02 from "../../assets/images/beauty_02.jpg";
-import img_03 from "../../assets/images/beauty_03.jpg";
-import img_04 from "../../assets/images/beauty_04.jpg";
-import img_05 from "../../assets/images/beauty_05.jpg";
-import img_06 from "../../assets/images/beauty_06.jpg";
-// import img_07 from "../../assets/images/beauty_07.jpg";
-// import img_08 from "../../assets/images/beauty_08.jpg";
-// import img_09 from "../../assets/images/beauty_09.jpg";
-// import img_10 from "../../assets/images/beauty_10.jpg";
-// import img_11 from "../../assets/images/beauty_11.jpg";
-// import img_12 from "../../assets/images/beauty_12.jpg";
+import ImageList from "../ImageList.js";
 
 const CarouselContainer = styled.div`
   margin: 0 auto;
@@ -121,24 +110,11 @@ function CarouselResponse({ width }) {
         // onClickItem={onClickItem}
         // onClickThumb={onClickThumb}
       >
-        <div>
-          <Image src={img_01} />
-        </div>
-        <div>
-          <Image src={img_02} />
-        </div>
-        <div>
-          <Image src={img_03} />
-        </div>
-        <div>
-          <Image src={img_04} />
-        </div>
-        <div>
-          <Image src={img_05} />
-        </div>
-        <div>
-          <Image src={img_06} />
-        </div>
+        {ImageList.map((item, index) => (
+          <div key={index}>
+            <Image src={item.imgName} />
+          </div>
+        ))}
       </Carousel>
     </CarouselContainer>
   );

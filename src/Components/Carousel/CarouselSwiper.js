@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+import ImageList from "../ImageList";
+
 import img_01 from "../../assets/images/beauty_01.jpg";
 import img_02 from "../../assets/images/beauty_02.jpg";
 import img_03 from "../../assets/images/beauty_03.jpg";
@@ -96,24 +98,11 @@ function CarouselSwiper({ width }) {
         //   onSwiper={(swiper) => console.log(swiper)}
         //   onSlideChange={() => console.log("slide change")}
       >
-        <SwiperSlide>
-          <Image src={img_07} alt="Image"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img_08} alt="Image"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img_09} alt="Image"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img_10} alt="Image"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img_11} alt="Image"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img_12} alt="Image"></Image>
-        </SwiperSlide>
+        {ImageList.map((image, index) => (
+          <SwiperSlide key={index}>
+            <Image src={image.imgName} alt="Image"></Image>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </CarouselContainer>
   );
