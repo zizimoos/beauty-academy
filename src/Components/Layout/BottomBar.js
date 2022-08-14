@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
-import { windowDimensionsStateAtom } from "../Recoil";
+import { windowDimensionsStateAtom } from "../../Recoil";
 
 const BottomBarContainer = styled.div`
-  width: 100vw;
   height: 50px;
+  margin: 0 auto;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -14,6 +14,13 @@ const BottomBarContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
+  @media (max-width: ${(props) => props.width}px) {
+    width: ${(props) => (props.width > 1280 ? 1280 : props.width)}px;
+  }
+  @media (min-width: 1280px) {
+    width: 1280px;
+    left: calc(50% - 640px);
+  }
   div:first-child {
     height: 50px;
     display: flex;
@@ -37,7 +44,7 @@ const BottomBarContainer = styled.div`
 function BottomBar(props) {
   const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
   return (
-    <BottomBarContainer height={windowDimensions.height}>
+    <BottomBarContainer width={windowDimensions.width}>
       <div>채팅상담</div>
       <div>수강료3초</div>
     </BottomBarContainer>

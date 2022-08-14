@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Layout/Navbar";
 import Main from "./Scene/Main";
 import Community from "./Scene/Community";
 import CustomerCenter from "./Scene/CustomerCenter";
@@ -12,8 +12,8 @@ import GotAJob from "./Scene/GotAJob";
 import Situation from "./Scene/Situation";
 import SpecialLecture from "./Scene/SpecialLecture";
 import NotFound from "./Scene/NotFound";
-import BottomBar from "./Components/BottomBar";
-import Footer from "./Components/Footer";
+import BottomBar from "./Components/Layout/BottomBar";
+import Footer from "./Components/Layout/Footer";
 
 function Router(props) {
   return (

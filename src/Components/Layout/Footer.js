@@ -1,18 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
-import { windowDimensionsStateAtom } from "../Recoil";
+import { windowDimensionsStateAtom } from "../../Recoil";
 
 const FooterContainer = styled.div`
-  width: 100vw;
   height: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: black;
+  @media (max-width: ${(props) => props.width}px) {
+    width: ${(props) => (props.width > 1280 ? 1280 : props.width)}px;
+  }
   div {
-    width: 100vw;
+    width: 100%;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -29,7 +32,7 @@ const FooterContainer = styled.div`
 function Footer(props) {
   const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
   return (
-    <FooterContainer height={windowDimensions.height}>
+    <FooterContainer width={windowDimensions.width}>
       <div>이용약관 | 개인정보처리방침 | 지점안내</div>
       <div>회사소개 1.</div>
       <div>회사소개 2.</div>

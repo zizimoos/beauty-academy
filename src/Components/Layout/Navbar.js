@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
-import { windowDimensionsStateAtom } from "../Recoil";
-import CarouselNaviBar from "./Carousel/CarouselNaviBar";
+import { windowDimensionsStateAtom } from "../../Recoil";
+import CarouselNaviBar from "../Carousel/CarouselNaviBar";
 // import Logo from "../assets/Logo.png";
-import navItems from "./NavItems";
+import navItems from "../NavItems";
 
 const NavbarContainer = styled.div`
   height: 50px;
